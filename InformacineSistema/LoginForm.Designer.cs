@@ -77,6 +77,7 @@ namespace InformacineSistema
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "LoginForm";
+            //this.Load += new System.EventHandler(this.LoginForm_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

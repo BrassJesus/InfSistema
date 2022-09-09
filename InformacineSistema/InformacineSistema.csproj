@@ -108,6 +108,42 @@
     <Compile Include="Class\Student.cs" />
     <Compile Include="Class\Lecturer.cs" />
     <Compile Include="Class\User.cs" />
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteLecturerForm.Designer.cs">
+      <DependentUpon>DeleteLecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStudentForm.Designer.cs">
+      <DependentUpon>DeleteStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLecturerForm.Designer.cs">
+      <DependentUpon>AddLecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGroup.Designer.cs">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteGroup.Designer.cs">
+      <DependentUpon>DeleteGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="LecturerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,8 +164,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddGroup.resx">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLecturerForm.resx">
+      <DependentUpon>AddLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteGroup.resx">
+      <DependentUpon>DeleteGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteLecturerForm.resx">
+      <DependentUpon>DeleteLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStudentForm.resx">
+      <DependentUpon>DeleteStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerForm.resx">
       <DependentUpon>LecturerForm.cs</DependentUpon>

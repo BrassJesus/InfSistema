@@ -13,7 +13,8 @@ namespace InformacineSistema
         public string Surname { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Group { get; set; }
+        public string Group { get; set; }           //SIUO ATVEJU DALYKAS
+        public int DalykoID { get; set; }
         public bool isAdmin()
         {
             return false;

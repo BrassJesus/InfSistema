@@ -222,11 +222,11 @@ namespace InformacineSistema
             {
                 lygis3 = 30;
             }
-            MessageBox.Show(Convert.ToString(lygis1));
-            MessageBox.Show(Convert.ToString(lygis2));
-            MessageBox.Show(Convert.ToString(lygis3));
-            MessageBox.Show(username);
-            MessageBox.Show(password);
+            //MessageBox.Show(Convert.ToString(lygis1));
+            //MessageBox.Show(Convert.ToString(lygis2));
+            //MessageBox.Show(Convert.ToString(lygis3));
+            //MessageBox.Show(username);
+            //MessageBox.Show(password);
             if (lygis1 == 10 && isConnected())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -234,7 +234,7 @@ namespace InformacineSistema
                 if (rd.Read())
                 {
                    
-                    MessageBox.Show("STUDENTAS");
+                   // MessageBox.Show("STUDENTAS");
                     user = new Student();
                     user.ID = Convert.ToInt32(rd[0].ToString());
                     user.Name = rd[1].ToString();
@@ -242,10 +242,11 @@ namespace InformacineSistema
                     group_id = Convert.ToInt32(rd[3].ToString());
                     rd.Close();
                     user.Group= whatgroup(group_id);
-                    if(user.Group == "ERROR")
+                    //MessageBox.Show(user.Group);
+                    if (user.Group == "ERROR")
                     {
                         MessageBox.Show("ERROR READING STUDENT GROUP");
-                        MessageBox.Show(ToString(user.Group));
+
                     }
                     //StudentForm f2 = new StudentForm(user);
                     //f2.ShowDialog();
@@ -261,13 +262,22 @@ namespace InformacineSistema
                 MySqlDataReader rd2 = cmd2.ExecuteReader();
                 if (rd2.Read())
                 {
+                    user = new Lecturer();
+                    user.ID = Convert.ToInt32(rd2[0].ToString());
+                    user.Name = rd2[1].ToString();
+                    user.Surname = rd2[2].ToString();
+                    user.Group = rd2[3].ToString();
                     rd2.Close();
-                    MessageBox.Show("DESTYTOJAS");
+                    this.Hide();
+                    new LecturerForm(user).Show();
+                    //MessageBox.Show("DESTYTOJAS");
                 }
             }
             if (lygis3 == 30 && isConnected())
             {
-                    MessageBox.Show("ADMIN");
+                //MessageBox.Show("ADMIN");
+                this.Hide();
+                new AdminForm().Show();
 
                 
             }
@@ -278,5 +288,6 @@ namespace InformacineSistema
             }
             conn.Close();
         }
+
     }
 }
